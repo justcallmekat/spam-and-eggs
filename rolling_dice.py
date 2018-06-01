@@ -22,9 +22,8 @@ def roll_dice(number_of_sides):
   guess = get_user_guess()
   if guess > max_val:
     print 'No guesses higher than %d.' % max_val
-    second_user_guess() #prompts user for second try at guessing number
     second_guess = second_user_guess()
-    if second_guess <= max_val:#STOPPED 5/30/18 @11:18PM EST. Line of code is causing Try again to show twice even when user inputs a number less than or equal to the max number.
+    if second_guess <= max_val:
       print 'Rolling... \n'
       sleep(2)
       print 'Your first roll is: %d \n' % first_roll
@@ -39,8 +38,7 @@ def roll_dice(number_of_sides):
           print 'Hmm, luck was on your side.. you\'ve won!'
       else:
           print 'Ha! You\'ve lost sucker!'
-  	#else:
-      #print 'Just give up!'
+
   else:
     print 'Rolling... \n'
     sleep(2)
